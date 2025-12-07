@@ -1,1 +1,41 @@
-<html><body><h1>Form</h1></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Form</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="table.html">Price List</a>
+        <a href="form.html">Order Form</a>
+    </nav>
+
+    <h2>Book Order Form</h2>
+
+    <form>
+        <label>Name:</label>
+        <input type="text" required>
+
+        <label>Email:</label>
+        <input type="email" required>
+
+        <label>Select Book:</label>
+        <select>
+            <option>Physics XI</option>
+            <option>Rich Dad Poor Dad</option>
+            <option>Harry Potter</option>
+        </select>
+
+        <label>Payment Method:</label><br>
+        <input type="radio" name="pay"> Cash on Delivery
+        <input type="radio" name="pay"> EasyPaisa
+
+        <br><br>
+        <button type="submit">Submit Order</button>
+    </form>
+
+</body>
+</html>
