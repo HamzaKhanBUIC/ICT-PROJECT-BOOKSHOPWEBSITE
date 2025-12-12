@@ -68,3 +68,73 @@ button {
     width: 100%;
     cursor: pointer;
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; 
+  }
+  to {
+    opacity: 1; 
+  }
+}
+.fade-in-element {
+  
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  animation-fill-mode: forwards; 
+}
+
+.fade-in-element {
+    padding: 30px;
+    border: 1px solid #e19292;
+    max-width: 600px;
+    margin: 50px auto;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px); 
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation-duration: 0.8s;
+  animation-timing-function: ease-out;
+  animation-name: fadeInUp;
+
+  animation-fill-mode: forwards;
+  opacity: 0; 
+}
+.fade-in-up {
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 600px;
+}
+
+
+.simple-button {
+  padding: 15px 30px;
+  font-size: 16px;
+  color: white;
+  background-color:purple; 
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease; 
+}
+
+.simple-button:hover {
+  background-color: rgb(8, 22, 84); 
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+.simple-button:active {
+  transform: translateY(0); 
+  box-shadow: none; 
+  background-color: #004494;
+}
