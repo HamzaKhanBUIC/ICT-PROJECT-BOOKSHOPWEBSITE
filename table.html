@@ -1,11 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Book Price List</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Price List - Hamza Book Shop</title>
     <link rel="stylesheet" href="css/style.css">
-</head>
+    <style>
+        /* Table Page Specific Styles */
+        .price-hero {
+            background: #6a1b9a;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            font-size: 2rem;
+            font-weight: bold;
+        }
 
+        table {
+            width: 80%;
+            margin: 40px auto;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background: #6a1b9a;
+            color: white;
+            font-size: 18px;
+        }
+
+        tr:hover {
+            background: #f4f1fa;
+            transform: scale(1.01);
+            transition: 0.3s;
+        }
+
+        @media (max-width: 768px) {
+            table {
+                width: 95%;
+            }
+
+            .price-hero {
+                font-size: 1.5rem;
+                padding: 30px 10px;
+            }
+        }
+    </style>
+</head>
 <body>
+
+    <!-- NAVBAR -->
     <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -13,29 +66,43 @@
         <a href="form.html">Order Form</a>
     </nav>
 
-    <h2>Book Price Table</h2>
+    <!-- HERO SECTION -->
+    <div class="price-hero">
+        Our Book Price List
+    </div>
 
+    <!-- PRICE TABLE -->
     <table>
-        <tr>
-            <th>Book Name</th>
-            <th>Category</th>
-            <th>Price (PKR)</th>
-        </tr>
-        <tr>
-            <td>Physics XI</td>
-            <td>Textbook</td>
-            <td>850</td>
-        </tr>
-        <tr>
-            <td>Rich Dad Poor Dad</td>
-            <td>Finance</td>
-            <td>1200</td>
-        </tr>
-        <tr>
-            <td>Harry Potter</td>
-            <td>Novel</td>
-            <td>1500</td>
-        </tr>
+        <thead>
+            <tr>
+                <th>Book Name</th>
+                <th>Category</th>
+                <th>Price (PKR)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Physics XI</td>
+                <td>Textbook</td>
+                <td>850</td>
+            </tr>
+            <tr>
+                <td>Rich Dad Poor Dad</td>
+                <td>Finance</td>
+                <td>1200</td>
+            </tr>
+            <tr>
+                <td>Harry Potter</td>
+                <td>Novel</td>
+                <td>1500</td>
+            </tr>
+            <tr>
+                <td>Atomic Habits</td>
+                <td>Self-Help</td>
+                <td>1500</td>
+            </tr>
+        </tbody>
     </table>
+
 </body>
 </html>
