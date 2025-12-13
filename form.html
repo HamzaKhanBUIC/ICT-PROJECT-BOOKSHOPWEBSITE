@@ -1,11 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Order Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form -  Bookies Shop</title>
     <link rel="stylesheet" href="css/style.css">
-</head>
+    <style>
+        /* Form Page Specific Styles */
+        .form-hero {
+            background: #6a1b9a;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            font-size: 2rem;
+            font-weight: bold;
+        }
 
+        form {
+            max-width: 500px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="text"], input[type="email"], select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px;
+            width: 100%;
+            background: #6a1b9a;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #4a148c;
+        }
+
+        @media (max-width: 768px) {
+            .form-hero {
+                font-size: 1.5rem;
+                padding: 30px 10px;
+            }
+
+            form {
+                width: 90%;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
 <body>
+
+    <!-- NAVBAR -->
     <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -13,29 +85,4 @@
         <a href="form.html">Order Form</a>
     </nav>
 
-    <h2>Book Order Form</h2>
-
-    <form>
-        <label>Name:</label>
-        <input type="text" required>
-
-        <label>Email:</label>
-        <input type="email" required>
-
-        <label>Select Book:</label>
-        <select>
-            <option>Physics XI</option>
-            <option>Rich Dad Poor Dad</option>
-            <option>Harry Potter</option>
-        </select>
-
-        <label>Payment Method:</label><br>
-        <input type="radio" name="pay"> Cash on Delivery
-        <input type="radio" name="pay"> EasyPaisa
-
-        <br><br>
-        <button type="submit">Submit Order</button>
-    </form>
-
-</body>
-</html>
+    <!-- HERO SE
