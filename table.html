@@ -1,26 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Book Price List - Hamza Book Shop</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
-<style>
-    body{ font-family:'Poppins',sans-serif; background:#f7f7f7; margin:0; }
-    nav{ background:#6a1b9a; padding:15px 20px; position:sticky; top:0; z-index:100; display:flex; justify-content:center; flex-wrap:wrap; }
-    nav a{ color:white; text-decoration:none; margin:10px 20px; font-weight:600; transition:0.3s;}
-    nav a:hover{ color:#ff4081; }
-
-    .hero{ background:#6a1b9a; color:white; text-align:center; padding:60px 20px; font-size:2.2rem; }
-    table{ width:85%; margin:40px auto; border-collapse:collapse; background:white; border-radius:12px; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,0.1);}
-    th,td{ padding:15px; text-align:center; border-bottom:1px solid #ddd; }
-    th{ background:#6a1b9a; color:white; font-size:18px; }
-    tr:hover{ background:#f4f1fa; transform:scale(1.01); transition:0.3s; }
-    @media(max-width:768px){ table{ width:95%; } .hero{ font-size:1.6rem; padding:40px 10px; } }
-</style>
+    <meta charset="UTF-8">
+    <title>Book Price List - Hamza Book Shop</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+    <!-- NAVBAR -->
     <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -28,35 +15,37 @@
         <a href="form.html">Order Form</a>
     </nav>
 
-    <div class="hero">
-        Book Price List
-    </div>
+    <section class="about-section">
+        <h2>Book Price Table</h2>
 
-    <table>
-        <thead>
+        <table>
             <tr>
                 <th>Book Name</th>
                 <th>Category</th>
                 <th>Price (PKR)</th>
             </tr>
-        </thead>
-        <tbody>
             <tr>
-                <td>Demo Book 1</td>
+                <td>Physics XI</td>
                 <td>Textbook</td>
+                <td>850</td>
+            </tr>
+            <tr>
+                <td>Rich Dad Poor Dad</td>
+                <td>Finance</td>
                 <td>1200</td>
             </tr>
             <tr>
-                <td>Demo Book 2</td>
+                <td>Harry Potter</td>
                 <td>Novel</td>
                 <td>1500</td>
             </tr>
-            <tr>
-                <td>Demo Book 3</td>
-                <td>Self-Help</td>
-                <td>850</td>
-            </tr>
-        </tbody>
-    </table>
+        </table>
+    </section>
+
+    <footer>
+        <p>© 2025 Hamza Book Shop</p>
+        <p>Contact: hamzakhanbuic@gmail.com</p>
+    </footer>
+
 </body>
 </html>
