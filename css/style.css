@@ -1,115 +1,71 @@
-/* =========================================
-   GENERAL STYLES
-========================================= */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
+/* GENERAL STYLES */
 body {
-    font-family: 'Poppins', sans-serif;
-    background: #f7f7f7;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #faf5ff;
     color: #333;
 }
 
-/* =========================================
-   NAVBAR
-========================================= */
+header {
+    text-align: center;
+    padding: 25px;
+    background: linear-gradient(to right, #6a1b9a, #ff4081);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
 nav {
     background: #6a1b9a;
-    padding: 15px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    padding: 12px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-nav a, nav button {
-    color: white;
+nav a {
+    color: #fff;
     text-decoration: none;
-    margin: 10px 20px;
-    font-weight: 600;
-    font-size: 16px;
+    margin: 0 15px;
+    font-size: 18px;
     transition: 0.3s;
-    background: none;
-    border: none;
-    cursor: pointer;
 }
 
-nav a:hover, nav button:hover {
+nav a:hover {
     color: #ff4081;
 }
 
-/* =========================================
-   HERO SECTION
-========================================= */
+/* HERO IMAGE */
 .hero {
     position: relative;
-    width: 100%;
-    height: 400px;
-    background: url('../images/banner.jpg') center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-}
-
-.hero-text {
     text-align: center;
-    background: rgba(0,0,0,0.5);
-    padding: 20px 40px;
-    border-radius: 16px;
-    animation: fadeUp 1s ease;
 }
 
-.hero-text h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+.hero img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-bottom: 5px solid #6a1b9a;
 }
 
-.hero-text p {
-    font-size: 1.2rem;
-}
-
-.cta-button {
-    margin-top: 15px;
-    padding: 12px 25px;
-    background: #ff4081;
-    border: none;
-    border-radius: 30px;
-    color: white;
-    cursor: pointer;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.cta-button:hover { background: #e91e63; }
-
-/* =========================================
-   SHOP SECTION
-========================================= */
-.shop {
+/* SHOP & NEW ARRIVALS */
+.shop, .new-arrivals {
     padding: 60px 20px;
     text-align: center;
-    background: #fafafa;
     max-width: 1200px;
     margin: auto;
 }
 
-.shop h2 {
+.shop h2, .new-arrivals h2 {
     font-size: 36px;
     margin-bottom: 10px;
     color: #6a1b9a;
 }
 
-.shop-subtitle {
+.shop-subtitle, .new-arrivals-subtitle {
     color: #555;
     margin-bottom: 40px;
 }
 
+/* BOOK GRID */
 .book-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -118,18 +74,20 @@ nav a:hover, nav button:hover {
     margin: auto;
 }
 
+/* BOOK CARD */
 .book-card {
     background: #fff;
     padding: 20px;
     border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
     transition: 0.4s ease;
     position: relative;
     animation: fadeUp 1s ease;
 }
 
 .book-card:hover {
-    transform: translateY(-10px) scale(1.03);
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
 }
 
 .book-card img {
@@ -139,16 +97,21 @@ nav a:hover, nav button:hover {
     border-radius: 12px;
 }
 
+.book-card h3 {
+    margin-top: 12px;
+    color: #6a1b9a;
+}
+
 .price {
     font-size: 18px;
-    color: #6a1b9a;
+    color: #ff4081;
     font-weight: bold;
 }
 
 .book-card button {
     margin-top: 10px;
     padding: 10px 20px;
-    background: #6a1b9a;
+    background: linear-gradient(to right, #6a1b9a, #ff4081);
     color: #fff;
     border: none;
     border-radius: 30px;
@@ -157,9 +120,10 @@ nav a:hover, nav button:hover {
 }
 
 .book-card button:hover {
-    background: #4a148c;
+    background: linear-gradient(to right, #ff4081, #6a1b9a);
 }
 
+/* BADGE */
 .badge {
     position: absolute;
     top: 15px;
@@ -171,92 +135,7 @@ nav a:hover, nav button:hover {
     font-size: 12px;
 }
 
-.featured {
-    border: 2px solid #6a1b9a;
-}
-
-/* =========================================
-   TABLE STYLES
-========================================= */
-table {
-    width: 85%;
-    margin: 40px auto;
-    border-collapse: collapse;
-    background: #fff;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-th, td {
-    padding: 15px;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
-}
-
-th {
-    background: #6a1b9a;
-    color: white;
-    font-size: 18px;
-}
-
-tr:hover {
-    background: #f4f1fa;
-    transform: scale(1.01);
-    transition: 0.3s;
-}
-
-/* =========================================
-   FORM STYLES
-========================================= */
-form {
-    max-width: 500px;
-    margin: 40px auto;
-    background: white;
-    padding: 30px;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-label {
-    display: block;
-    margin-top: 15px;
-    font-weight: 600;
-}
-
-input[type="text"], input[type="email"], select {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-}
-
-input[type="radio"] {
-    margin-right: 10px;
-}
-
-button[type="submit"] {
-    margin-top: 20px;
-    padding: 12px;
-    width: 100%;
-    background: #6a1b9a;
-    color: white;
-    border: none;
-    border-radius: 25px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button[type="submit"]:hover {
-    background: #4a148c;
-}
-
-/* =========================================
-   TESTIMONIALS
-========================================= */
+/* TESTIMONIALS */
 .testimonials {
     background: #f4f1fa;
     padding: 60px 20px;
@@ -289,75 +168,85 @@ button[type="submit"]:hover {
     color: #6a1b9a;
 }
 
-/* =========================================
-   ABOUT SECTION
-========================================= */
-.about-section {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px;
-    background: white;
+/* CART */
+.cart {
+    background: #fff;
+    padding: 40px;
+    max-width: 600px;
+    margin: 60px auto;
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
 }
 
-.about-section h2 {
-    margin-bottom: 20px;
-    color: #6a1b9a;
+.cart ul {
+    list-style: none;
+    padding: 0;
 }
 
-.about-section p {
-    font-size: 1.1rem;
-    color: #555;
-    line-height: 1.6;
+.cart li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
 }
 
-.group-members {
-    margin-top: 20px;
+.cart button {
+    background: linear-gradient(to right, #6a1b9a, #ff4081);
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
-.group-members li {
-    margin-bottom: 10px;
-    font-weight: 600;
+.cart button:hover {
+    background: linear-gradient(to right, #ff4081, #6a1b9a);
 }
 
-/* =========================================
-   FOOTER
-========================================= */
-footer {
-    background:#6a1b9a;
-    color:white;
-    text-align:center;
-    padding:30px 20px;
+#successMsg {
+    margin-top: 15px;
+    color: green;
+    font-weight: bold;
 }
 
-footer .group-members {
-    list-style:none;
-    display:flex;
-    justify-content:center;
-    gap:15px;
-    padding:0;
-    margin-top:10px;
+/* FORM */
+form {
+    width: 40%;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
 }
 
-/* =========================================
-   ANIMATION
-========================================= */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+input[type="radio"] {
+    width: auto;
+}
+
+button[type="submit"] {
+    margin-top: 15px;
+    padding: 12px;
+    width: 100%;
+    cursor: pointer;
+}
+
+/* ANIMATIONS */
 @keyframes fadeUp {
-    from { opacity:0; transform:translateY(40px); }
-    to { opacity:1; transform:translateY(0); }
+    from {opacity: 0; transform: translateY(40px);}
+    to {opacity: 1; transform: translateY(0);}
 }
 
-/* =========================================
-   RESPONSIVE
-========================================= */
-@media(max-width:768px){
-    nav a, nav button {
-        display: block;
-        margin: 10px 0;
-    }
-    .hero-text h1{ font-size:1.8rem; }
-    .hero-text p{ font-size:1rem; }
-    form{ width:90%; padding:20px; }
-    table{ width:95%; }
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    nav a {display: block; margin: 10px 0;}
+    .hero img {height: 200px;}
+    form {width: 90%;}
 }
