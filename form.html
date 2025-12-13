@@ -1,29 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Order Form - Hamza Book Shop</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
-<style>
-    body{ font-family:'Poppins',sans-serif; background:#f7f7f7; margin:0; }
-    nav{ background:#6a1b9a; padding:15px 20px; position:sticky; top:0; z-index:100; display:flex; justify-content:center; flex-wrap:wrap; }
-    nav a{ color:white; text-decoration:none; margin:10px 20px; font-weight:600; transition:0.3s;}
-    nav a:hover{ color:#ff4081; }
-
-    .hero{ background:#6a1b9a; color:white; text-align:center; padding:60px 20px; font-size:2.2rem; }
-    form{ max-width:500px; margin:40px auto; background:white; padding:30px; border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,0.1);}
-    label{ display:block; margin-top:15px; font-weight:600; color:#333; }
-    input[type="text"], input[type="email"], select{ width:100%; padding:10px; margin-top:5px; border-radius:8px; border:1px solid #ccc; font-size:16px; }
-    input[type="radio"]{ margin-right:10px; }
-    button{ margin-top:20px; padding:12px; width:100%; background:#6a1b9a; color:white; border:none; border-radius:25px; font-size:16px; cursor:pointer; transition:0.3s;}
-    button:hover{ background:#4a148c; }
-    #successMsg{ color:green; margin-top:15px; font-weight:bold; }
-    @media(max-width:768px){ .hero{ font-size:1.6rem; padding:40px 10px; } form{ width:90%; padding:20px; } }
-</style>
+    <meta charset="UTF-8">
+    <title>Order Form - Hamza Book Shop</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+    <!-- NAVBAR -->
     <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -31,45 +15,36 @@
         <a href="form.html">Order Form</a>
     </nav>
 
-    <div class="hero">
-        Place Your Book Order
-    </div>
+    <section class="about-section">
+        <h2>Book Order Form</h2>
 
-    <form id="orderForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name" required>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Your Name" required>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="example@mail.com" required>
 
-        <label for="book">Select Book:</label>
-        <select id="book">
-            <option>Demo Book 1</option>
-            <option>Demo Book 2</option>
-            <option>Demo Book 3</option>
-        </select>
+            <label for="book">Select Book:</label>
+            <select id="book">
+                <option>Demo Book 1</option>
+                <option>Demo Book 2</option>
+                <option>Demo Book 3</option>
+                <option>Demo Book 4</option>
+            </select>
 
-        <label>Payment Method:</label>
-        <div>
-            <input type="radio" name="pay" value="Cash on Delivery" required> Cash on Delivery
-            <input type="radio" name="pay" value="EasyPaisa" required> EasyPaisa
-        </div>
+            <label>Payment Method:</label>
+            <input type="radio" name="pay" value="Cash on Delivery"> Cash on Delivery
+            <input type="radio" name="pay" value="EasyPaisa"> EasyPaisa
 
-        <button type="submit">Submit Order</button>
-        <p id="successMsg"></p>
-    </form>
+            <button type="submit">Submit Order</button>
+        </form>
+    </section>
 
-    <script>
-        document.getElementById("orderForm").addEventListener("submit", function(e){
-            e.preventDefault();
-            const name=document.getElementById("name").value;
-            const email=document.getElementById("email").value;
-            const book=document.getElementById("book").value;
-            const payment=document.querySelector('input[name="pay"]:checked').value;
-            document.getElementById("successMsg").innerText=
-                `Thank you ${name}! Your order for "${book}" has been received. Payment method: ${payment}.`;
-            this.reset();
-        });
-    </script>
+    <footer>
+        <p>© 2025 Hamza Book Shop</p>
+        <p>Contact: hamzakhanbuic@gmail.com</p>
+    </footer>
+
 </body>
 </html>
