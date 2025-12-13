@@ -27,15 +27,19 @@ nav {
     flex-wrap: wrap;
 }
 
-nav a {
+nav a, nav button {
     color: white;
     text-decoration: none;
     margin: 10px 20px;
     font-weight: 600;
+    font-size: 16px;
     transition: 0.3s;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
-nav a:hover {
+nav a:hover, nav button:hover {
     color: #ff4081;
 }
 
@@ -43,18 +47,46 @@ nav a:hover {
    HERO SECTION
 ========================================= */
 .hero {
-    background: #6a1b9a;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: url('../images/banner.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
-    text-align: center;
-    padding: 60px 20px;
-    font-size: 2.2rem;
 }
 
-.hero img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
+.hero-text {
+    text-align: center;
+    background: rgba(0,0,0,0.5);
+    padding: 20px 40px;
+    border-radius: 16px;
+    animation: fadeUp 1s ease;
 }
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+}
+
+.cta-button {
+    margin-top: 15px;
+    padding: 12px 25px;
+    background: #ff4081;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.cta-button:hover { background: #e91e63; }
 
 /* =========================================
    SHOP SECTION
@@ -78,7 +110,6 @@ nav a:hover {
     margin-bottom: 40px;
 }
 
-/* BOOK GRID */
 .book-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -87,7 +118,6 @@ nav a:hover {
     margin: auto;
 }
 
-/* BOOK CARD */
 .book-card {
     background: #fff;
     padding: 20px;
@@ -130,7 +160,6 @@ nav a:hover {
     background: #4a148c;
 }
 
-/* BADGE */
 .badge {
     position: absolute;
     top: 15px;
@@ -142,13 +171,12 @@ nav a:hover {
     font-size: 12px;
 }
 
-/* FEATURED BOOK */
 .featured {
     border: 2px solid #6a1b9a;
 }
 
 /* =========================================
-   TABLES
+   TABLE STYLES
 ========================================= */
 table {
     width: 85%;
@@ -209,7 +237,7 @@ input[type="radio"] {
     margin-right: 10px;
 }
 
-button {
+button[type="submit"] {
     margin-top: 20px;
     padding: 12px;
     width: 100%;
@@ -222,14 +250,8 @@ button {
     transition: 0.3s;
 }
 
-button:hover {
+button[type="submit"]:hover {
     background: #4a148c;
-}
-
-#successMsg {
-    color: green;
-    margin-top: 15px;
-    font-weight: bold;
 }
 
 /* =========================================
@@ -291,86 +313,51 @@ button:hover {
 }
 
 .group-members {
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .group-members li {
     margin-bottom: 10px;
     font-weight: 600;
-    color: #333;
-}
-
-.about-image {
-    display: block;
-    margin: 30px auto;
-    max-width: 400px;
-    border-radius: 12px;
 }
 
 /* =========================================
-   CART
+   FOOTER
 ========================================= */
-.cart {
-    background: #fff;
-    padding: 40px;
-    max-width: 600px;
-    margin: 60px auto;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    text-align: center;
+footer {
+    background:#6a1b9a;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
 }
 
-.cart ul {
-    list-style: none;
-    padding: 0;
-}
-
-.cart li {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-}
-
-.cart button {
-    background: #6a1b9a;
-    color: white;
-    border: none;
-    padding: 12px 30px;
-    border-radius: 30px;
-    cursor: pointer;
-    font-size: 16px;
+footer .group-members {
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    padding:0;
+    margin-top:10px;
 }
 
 /* =========================================
-   ANIMATIONS
+   ANIMATION
 ========================================= */
 @keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity:0; transform:translateY(40px); }
+    to { opacity:1; transform:translateY(0); }
 }
 
 /* =========================================
    RESPONSIVE
 ========================================= */
-@media (max-width: 768px) {
-    nav a {
+@media(max-width:768px){
+    nav a, nav button {
         display: block;
         margin: 10px 0;
     }
-    .hero {
-        font-size: 1.6rem;
-        padding: 40px 10px;
-    }
-    form {
-        width: 90%;
-        padding: 20px;
-    }
-    table {
-        width: 95%;
-    }
+    .hero-text h1{ font-size:1.8rem; }
+    .hero-text p{ font-size:1rem; }
+    form{ width:90%; padding:20px; }
+    table{ width:95%; }
 }
