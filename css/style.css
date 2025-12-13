@@ -1,5 +1,6 @@
+/* GENERAL STYLES */
 body {
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     margin: 0;
     background: #f7f7f7;
 }
@@ -8,7 +9,7 @@ header {
     text-align: center;
     padding: 20px;
     background: #4a148c;
-    color: white;
+    color: #fff;
 }
 
 nav {
@@ -18,7 +19,7 @@ nav {
 }
 
 nav a {
-    color: white;
+    color: #fff;
     text-decoration: none;
     margin: 0 15px;
     font-size: 18px;
@@ -28,28 +29,31 @@ nav a:hover {
     color: yellow;
 }
 
+/* HERO IMAGE */
 .hero img {
     width: 100%;
     height: 300px;
     object-fit: cover;
 }
 
+/* TABLE STYLES */
 table {
     width: 70%;
     margin: 20px auto;
     border-collapse: collapse;
-    background: white;
+    background: #fff;
 }
 
 table, th, td {
-    border: 1px solid black;
+    border: 1px solid #000;
     padding: 12px;
 }
 
+/* FORM STYLES */
 form {
     width: 40%;
-    margin: auto;
-    background: white;
+    margin: 20px auto;
+    background: #fff;
     padding: 20px;
     border-radius: 10px;
 }
@@ -62,17 +66,26 @@ label {
 button {
     margin-top: 15px;
     padding: 10px;
-    background: purple;
-    color: white;
+    background: #6a1b9a;
+    color: #fff;
     border: none;
     width: 100%;
     cursor: pointer;
+    border-radius: 25px;
+    transition: 0.3s;
 }
+
+button:hover {
+    background: #4a148c;
+}
+
 /* SHOP SECTION */
 .shop {
     padding: 60px 20px;
     text-align: center;
     background: #fafafa;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .shop h2 {
@@ -85,7 +98,7 @@ button {
     margin-bottom: 40px;
 }
 
-/* GRID */
+/* GRID FOR BOOKS */
 .book-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -96,11 +109,12 @@ button {
 
 /* BOOK CARD */
 .book-card {
-    background: white;
+    background: #fff;
     padding: 20px;
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     transition: 0.4s ease;
+    position: relative;
     animation: fadeUp 1s ease;
 }
 
@@ -108,7 +122,6 @@ button {
     transform: translateY(-10px) scale(1.03);
 }
 
-/* IMAGE */
 .book-card img {
     width: 100%;
     height: 280px;
@@ -116,19 +129,17 @@ button {
     border-radius: 12px;
 }
 
-/* PRICE */
 .price {
     font-size: 18px;
     color: #6a1b9a;
     font-weight: bold;
 }
 
-/* BUTTON */
 .book-card button {
     margin-top: 10px;
     padding: 10px 20px;
     background: #6a1b9a;
-    color: white;
+    color: #fff;
     border: none;
     border-radius: 30px;
     cursor: pointer;
@@ -139,43 +150,23 @@ button {
     background: #4a148c;
 }
 
-/* ANIMATION */
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 /* BADGE */
 .badge {
     position: absolute;
     top: 15px;
     left: 15px;
     background: #ff4081;
-    color: white;
+    color: #fff;
     padding: 5px 12px;
     border-radius: 20px;
     font-size: 12px;
 }
 
-/* FEATURED CARD */
-.book-card {
-    position: relative;
-}
-
+/* FEATURED BOOK */
 .featured {
     border: 2px solid #6a1b9a;
 }
 
-/* DURADRY STYLE SPACING */
-.shop {
-    max-width: 1200px;
-    margin: auto;
-}
 /* TESTIMONIALS */
 .testimonials {
     background: #f4f1fa;
@@ -192,7 +183,7 @@ button {
 }
 
 .testimonial {
-    background: white;
+    background: #fff;
     padding: 25px;
     border-radius: 14px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.1);
@@ -208,26 +199,13 @@ button {
     margin-top: 15px;
     color: #6a1b9a;
 }
-@media (max-width: 768px) {
 
-    nav a {
-        display: block;
-        margin: 10px 0;
-    }
-
-    .hero img {
-        height: 200px;
-    }
-
-    form {
-        width: 90%;
-    }
-}
+/* CART */
 .cart {
     background: #fff;
     padding: 40px;
-    margin: 60px auto;
     max-width: 600px;
+    margin: 60px auto;
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     text-align: center;
@@ -245,9 +223,9 @@ button {
 
 .cart button {
     background: #6a1b9a;
-    color: white;
-    padding: 12px 30px;
+    color: #fff;
     border: none;
+    padding: 12px 30px;
     border-radius: 30px;
     cursor: pointer;
     font-size: 16px;
@@ -258,39 +236,31 @@ button {
     color: green;
     font-weight: bold;
 }
-.cart {
-    background: #ffffff;
-    padding: 40px;
-    max-width: 600px;
-    margin: 60px auto;
-    border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-    text-align: center;
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.cart ul {
-    list-style: none;
-    padding: 0;
-}
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
 
-.cart li {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-}
+    .hero img {
+        height: 200px;
+    }
 
-.cart button {
-    background: #6a1b9a;
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 25px;
-    cursor: pointer;
-    font-size: 16px;
+    form {
+        width: 90%;
+    }
 }
-
-#successMsg {
-    margin-top: 15px;
-    color: green;
-    font-weight: bold;
-}
-
