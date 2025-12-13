@@ -2,30 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Hamza Book Shop</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        body { font-family: 'Poppins', sans-serif; background: #f7f7f7; margin:0; }
-        nav {
-            background: #6a1b9a; padding: 15px 20px; position: sticky; top: 0; z-index: 100; display: flex; justify-content: center; flex-wrap: wrap;
-        }
-        nav a { color:white; text-decoration:none; margin:10px 20px; font-weight:600; transition:0.3s;}
-        nav a:hover { color: #ff4081; }
-
-        .hero { background:#6a1b9a; color:white; text-align:center; padding: 80px 20px; font-size:2.5rem; }
-        .about-section { max-width: 900px; margin: 40px auto; padding: 20px; background:white; border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,0.1);}
-        .about-section h2 { margin-bottom: 20px; color:#6a1b9a; }
-        .about-section p { font-size:1.1rem; color:#555; line-height:1.6; }
-        .group-members { margin-top:30px; }
-        .group-members li { margin-bottom: 10px; font-weight:600; color:#333; }
-
-        .about-image { display:block; margin: 30px auto; max-width:400px; border-radius:12px; }
-        @media(max-width:768px){ .hero{ font-size:1.8rem; padding:50px 10px; } }
-    </style>
 </head>
 <body>
+
+    <!-- NAVBAR -->
     <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -33,16 +15,12 @@
         <a href="form.html">Order Form</a>
     </nav>
 
-    <div class="hero">
-        About Hamza Book Shop
-    </div>
-
+    <!-- ABOUT SECTION -->
     <section class="about-section">
-        <h2>Our Mission</h2>
-        <p>We are a local book shop dedicated to providing quality academic and non-academic books.  
-        Our mission is to promote a reading culture among students and book lovers in Pakistan.</p>
+        <h2>About Hamza Book Shop</h2>
+        <p>We are a local book shop offering both academic and non-academic books. Our mission is to promote reading culture among students in Pakistan and provide high-quality books at affordable prices.</p>
 
-        <h2>Meet Our Team</h2>
+        <h3>Group Members</h3>
         <ul class="group-members">
             <li>Saqib</li>
             <li>Hamza</li>
@@ -50,7 +28,15 @@
             <li>Shayan</li>
         </ul>
 
-        <img src="images/books.jpg" alt="Books" class="about-image">
+        <div style="text-align:center; margin-top:30px;">
+            <img src="images/books.jpg" alt="Books" style="max-width:80%; border-radius:16px; box-shadow:0 8px 25px rgba(0,0,0,0.1);">
+        </div>
     </section>
+
+    <footer>
+        <p>© 2025 Hamza Book Shop</p>
+        <p>Contact: hamzakhanbuic@gmail.com</p>
+    </footer>
+
 </body>
 </html>
