@@ -2,49 +2,94 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Order Form - Hamza Book Shop</title>
+    <title>Book Order Form</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- NAVBAR -->
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="table.html">Price List</a>
-        <a href="form.html">Order Form</a>
-    </nav>
+<!-- NAVBAR -->
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="table.html">Price List</a>
+    <a href="form.html">Order Form</a>
+</nav>
 
-    <section class="about-section">
-        <h2>Book Order Form</h2>
+<section class="shop">
+    <h2>Order Your Books</h2>
+    <p class="shop-subtitle">Fill the form to place your order</p>
 
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" placeholder="Your Name" required>
+    <form id="orderForm">
+        <label>Name:</label>
+        <input type="text" id="name" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" placeholder="example@mail.com" required>
+        <label>Email:</label>
+        <input type="email" id="email" required>
 
-            <label for="book">Select Book:</label>
-            <select id="book">
-                <option>Demo Book 1</option>
-                <option>Demo Book 2</option>
-                <option>Demo Book 3</option>
-                <option>Demo Book 4</option>
-            </select>
+        <label>Select Book:</label>
+        <select id="bookSelect" required>
+            <option value="Demo Book 1" data-price="800">Demo Book 1 (PKR 800)</option>
+            <option value="Demo Book 2" data-price="1200">Demo Book 2 (PKR 1200)</option>
+            <option value="Demo Book 3" data-price="1500">Demo Book 3 (PKR 1500)</option>
+            <option value="Demo Book 4" data-price="900">Demo Book 4 (PKR 900)</option>
+            <option value="Demo Book 5" data-price="500">Demo Book 5 (PKR 500)</option>
+            <option value="Demo Book 6" data-price="1300">Demo Book 6 (PKR 1300)</option>
+        </select>
 
-            <label>Payment Method:</label>
-            <input type="radio" name="pay" value="Cash on Delivery"> Cash on Delivery
-            <input type="radio" name="pay" value="EasyPaisa"> EasyPaisa
+        <label>Quantity:</label>
+        <input type="number" id="quantity" value="1" min="1">
 
-            <button type="submit">Submit Order</button>
-        </form>
-    </section>
+        <label>Payment Method:</label><br>
+        <input type="radio" name="pay" value="cash" checked> Cash on Delivery<br>
+        <input type="radio" name="pay" value="easypaisa"> EasyPaisa
 
-    <footer>
-        <p>© 2025 Hamza Book Shop</p>
-        <p>Contact: hamzakhanbuic@gmail.com</p>
-    </footer>
+        <div id="easypaisaInfo" style="display:none; margin-top:10px;">
+            <p>Send payment to EasyPaisa Number: <strong>0300-XXXXXXX</strong></p>
+            <p>Upload screenshot after payment (Optional)</p>
+        </div>
+
+        <h3>Total: PKR <span id="totalAmount">0</span></h3>
+
+        <button type="submit">Submit Order</button>
+        <p id="successMsg"></p>
+    </form>
+</section>
+
+<script>
+const bookSelect = document.getElementById('bookSelect');
+const quantityInput = document.getElementById('quantity');
+const totalAmount = document.getElementById('totalAmount');
+const paymentMethods = document.getElementsByName('pay');
+const easypaisaInfo = document.getElementById('easypaisaInfo');
+
+function updateTotal() {
+    const price = parseInt(bookSelect.selectedOptions[0].dataset.price);
+    const qty = parseInt(quantityInput.value);
+    totalAmount.innerText = price * qty;
+}
+
+// Show/hide EasyPaisa info
+paymentMethods.forEach(radio => {
+    radio.addEventListener('change', () => {
+        easypaisaInfo.style.display = radio.value === 'easypaisa' ? 'block' : 'none';
+    });
+});
+
+bookSelect.addEventListener('change', updateTotal);
+quantityInput.addEventListener('input', updateTotal);
+
+updateTotal(); // initial total
+
+// Form submission
+document.getElementById('orderForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    document.getElementById('successMsg').innerText =
+        "Order placed successfully! Thank you for shopping.";
+    this.reset();
+    updateTotal();
+    easypaisaInfo.style.display = 'none';
+});
+</script>
 
 </body>
 </html>
