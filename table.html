@@ -2,107 +2,61 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Price List - Hamza Book Shop</title>
+    <title>Book Price List</title>
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        /* Table Page Specific Styles */
-        .price-hero {
-            background: #6a1b9a;
-            color: white;
-            text-align: center;
-            padding: 50px 20px;
-            font-size: 2rem;
-            font-weight: bold;
-        }
-
-        table {
-            width: 80%;
-            margin: 40px auto;
-            border-collapse: collapse;
-            background: #fff;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-        }
-
-        th, td {
-            padding: 15px;
-            text-align: center;
-            border-bottom: 1px solid #ddd;
-        }
-
-        th {
-            background: #6a1b9a;
-            color: white;
-            font-size: 18px;
-        }
-
-        tr:hover {
-            background: #f4f1fa;
-            transform: scale(1.01);
-            transition: 0.3s;
-        }
-
-        @media (max-width: 768px) {
-            table {
-                width: 95%;
-            }
-
-            .price-hero {
-                font-size: 1.5rem;
-                padding: 30px 10px;
-            }
-        }
-    </style>
 </head>
 <body>
 
-    <!-- NAVBAR -->
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="table.html">Price List</a>
-        <a href="form.html">Order Form</a>
-    </nav>
+<!-- NAVBAR -->
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="table.html">Price List</a>
+    <a href="form.html">Order Form</a>
+</nav>
 
-    <!-- HERO SECTION -->
-    <div class="price-hero">
-        Our Book Price List
-    </div>
+<section class="shop">
+    <h2>Book Price List</h2>
+    <p class="shop-subtitle">Check prices for all our books</p>
 
-    <!-- PRICE TABLE -->
     <table>
-        <thead>
-            <tr>
-                <th>Book Name</th>
-                <th>Category</th>
-                <th>Price (PKR)</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Physics XI</td>
-                <td>Textbook</td>
-                <td>850</td>
-            </tr>
-            <tr>
-                <td>Rich Dad Poor Dad</td>
-                <td>Finance</td>
-                <td>1200</td>
-            </tr>
-            <tr>
-                <td>Harry Potter</td>
-                <td>Novel</td>
-                <td>1500</td>
-            </tr>
-            <tr>
-                <td>Atomic Habits</td>
-                <td>Self-Help</td>
-                <td>1500</td>
-            </tr>
-        </tbody>
+        <tr>
+            <th>Book Name</th>
+            <th>Category</th>
+            <th>Price (PKR)</th>
+        </tr>
+        <tr>
+            <td>Demo Book 1</td>
+            <td>Study / Academic</td>
+            <td>800</td>
+        </tr>
+        <tr>
+            <td>Demo Book 2</td>
+            <td>Study / Academic</td>
+            <td>1200</td>
+        </tr>
+        <tr>
+            <td>Demo Book 3</td>
+            <td>Fiction</td>
+            <td>1500</td>
+        </tr>
+        <tr>
+            <td>Demo Book 4</td>
+            <td>Non-Fiction</td>
+            <td>900</td>
+        </tr>
+        <tr>
+            <td>Demo Book 5</td>
+            <td>Comics</td>
+            <td>500</td>
+        </tr>
+        <tr>
+            <td>Demo Book 6</td>
+            <td>Philosophical / Self-Help</td>
+            <td>1300</td>
+        </tr>
     </table>
+</section>
 
 </body>
 </html>

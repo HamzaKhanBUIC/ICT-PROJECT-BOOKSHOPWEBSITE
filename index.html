@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hamza Book Shop</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
@@ -162,118 +161,169 @@
 </head>
 <body>
 
-    <!-- NAVBAR -->
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="table.html">Price List</a>
-        <a href="form.html">Order Form</a>
-    </nav>
+<!-- HEADER -->
+<header>
+    <h1>Welcome to Hamza Book Shop</h1>
+    <p>Your online place for knowledge & reading</p>
+</header>
 
-    <!-- HERO -->
-    <section class="hero">
-        <h1>Welcome to Hamza Book Shop</h1>
-        <p>Your one-stop shop for all your favorite books</p>
-    </section>
+<!-- NAVBAR -->
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="table.html">Price List</a>
+    <a href="form.html">Order Form</a>
+</nav>
 
-    <!-- SHOP SECTION -->
-    <section class="shop">
-        <h2>Featured Books</h2>
-        <p class="shop-subtitle">Explore our best sellers</p>
+<!-- HERO -->
+<section class="hero">
+    <img src="images/banner.jpg" alt="Books Banner">
+</section>
 
-        <div class="book-grid">
-            <div class="book-card featured">
-                <span class="badge">Best Seller</span>
-                <img src="images/demo-book1.jpg" alt="Demo Book 1">
-                <h3>Demo Book 1</h3>
-                <p class="price">PKR 1,200</p>
-                <button onclick="addToCart('Demo Book 1',1200)">Buy Now</button>
-            </div>
+<!-- SHOP SECTION -->
+<section class="shop">
+    <h2>Shop Our Books</h2>
+    <p class="shop-subtitle">Best sellers loved by our readers</p>
 
-            <div class="book-card">
-                <img src="images/demo-book2.jpg" alt="Demo Book 2">
-                <h3>Demo Book 2</h3>
-                <p class="price">PKR 1,500</p>
-                <button onclick="addToCart('Demo Book 2',1500)">Buy Now</button>
-            </div>
-
-            <div class="book-card featured">
-                <span class="badge">Popular</span>
-                <img src="images/demo-book3.jpg" alt="Demo Book 3">
-                <h3>Demo Book 3</h3>
-                <p class="price">PKR 850</p>
-                <button onclick="addToCart('Demo Book 3',850)">Buy Now</button>
-            </div>
+    <div class="book-grid">
+        <!-- Study / Academic -->
+        <div class="book-card featured">
+            <span class="badge">Study</span>
+            <img src="images/demo-book.jpg" alt="Demo Book 1">
+            <h3>Demo Book 1</h3>
+            <p class="price">PKR 800</p>
+            <button onclick="addToCart('Demo Book 1', 800)">Buy Now</button>
         </div>
-    </section>
-
-    <!-- CART -->
-    <section class="cart">
-        <h2>Your Cart</h2>
-        <ul id="cartItems"></ul>
-        <h3>Total: PKR <span id="total">0</span></h3>
-        <button onclick="checkout()">Place Order</button>
-        <p id="successMsg"></p>
-    </section>
-
-    <!-- TESTIMONIALS -->
-    <section class="testimonials">
-        <h2>What Our Readers Say</h2>
-        <div class="testimonial-grid">
-            <div class="testimonial">
-                <p>"Amazing book quality and fast delivery."</p>
-                <h4>— Ali Khan</h4>
-            </div>
-            <div class="testimonial">
-                <p>"Best place for academic and self-help books."</p>
-                <h4>— Ayesha Noor</h4>
-            </div>
-            <div class="testimonial">
-                <p>"Highly recommended for students."</p>
-                <h4>— Usman Ahmed</h4>
-            </div>
+        <div class="book-card">
+            <img src="images/demo-book.jpg" alt="Demo Book 2">
+            <h3>Demo Book 2</h3>
+            <p class="price">PKR 1200</p>
+            <button onclick="addToCart('Demo Book 2', 1200)">Buy Now</button>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- CART JAVASCRIPT -->
-    <script>
-        let cart = [];
-        let total = 0;
+<!-- NEW ARRIVALS SECTION -->
+<section class="new-arrivals">
+    <h2>New Arrivals</h2>
+    <p class="new-arrivals-subtitle">Check out our latest books</p>
 
-        function addToCart(book, price) {
-            cart.push({book, price});
-            total += price;
-            renderCart();
-        }
+    <div class="book-grid">
+        <!-- Fiction -->
+        <div class="book-card featured">
+            <span class="badge">Fiction</span>
+            <img src="images/demo-book.jpg" alt="Demo Book 3">
+            <h3>Demo Book 3</h3>
+            <p class="price">PKR 1500</p>
+            <button onclick="addToCart('Demo Book 3', 1500)">Buy Now</button>
+        </div>
+        <!-- Non-Fiction -->
+        <div class="book-card">
+            <span class="badge">Non-Fiction</span>
+            <img src="images/demo-book.jpg" alt="Demo Book 4">
+            <h3>Demo Book 4</h3>
+            <p class="price">PKR 900</p>
+            <button onclick="addToCart('Demo Book 4', 900)">Buy Now</button>
+        </div>
+        <!-- Comics -->
+        <div class="book-card">
+            <span class="badge">Comics</span>
+            <img src="images/demo-book.jpg" alt="Demo Book 5">
+            <h3>Demo Book 5</h3>
+            <p class="price">PKR 500</p>
+            <button onclick="addToCart('Demo Book 5', 500)">Buy Now</button>
+        </div>
+        <!-- Philosophical / Self-Help -->
+        <div class="book-card featured">
+            <span class="badge">Philosophical</span>
+            <img src="images/demo-book.jpg" alt="Demo Book 6">
+            <h3>Demo Book 6</h3>
+            <p class="price">PKR 1300</p>
+            <button onclick="addToCart('Demo Book 6', 1300)">Buy Now</button>
+        </div>
+    </div>
+</section>
 
-        function renderCart() {
-            const cartItems = document.getElementById("cartItems");
-            cartItems.innerHTML = "";
-            cart.forEach((item, index)=>{
-                const li = document.createElement("li");
-                li.innerHTML = `${item.book} - PKR ${item.price} <button onclick="removeItem(${index})">❌</button>`;
-                cartItems.appendChild(li);
-            });
-            document.getElementById("total").innerText = total;
-        }
+<!-- CART SECTION -->
+<section class="cart">
+    <h2>Your Cart</h2>
+    <ul id="cartItems"></ul>
+    <h3>Total: PKR <span id="total">0</span></h3>
+    <button onclick="checkout()">Place Order</button>
+    <p id="successMsg"></p>
+</section>
 
-        function removeItem(index){
-            total -= cart[index].price;
-            cart.splice(index,1);
-            renderCart();
-        }
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+    <h2>What Our Readers Say</h2>
+    <div class="testimonial-grid">
+        <div class="testimonial">
+            <p>"Amazing book quality and fast delivery."</p>
+            <h4>— Ali Khan</h4>
+        </div>
+        <div class="testimonial">
+            <p>"Best place for academic and self-help books."</p>
+            <h4>— Ayesha Noor</h4>
+        </div>
+        <div class="testimonial">
+            <p>"Highly recommended for students."</p>
+            <h4>— Usman Ahmed</h4>
+        </div>
+    </div>
+</section>
 
-        function checkout(){
-            if(cart.length === 0){
-                alert("Your cart is empty!");
-                return;
-            }
-            document.getElementById("successMsg").innerText = 
-                "Order placed successfully! Thank you for shopping.";
-            cart=[];
-            total=0;
-            renderCart();
-        }
-    </script>
+<!-- ABOUT -->
+<section class="intro">
+    <h2>About Our Book Shop</h2>
+    <p>We provide best quality books for students, readers, and professionals at affordable prices.</p>
+    <h3>Group Members</h3>
+    <ul>
+        <li>Saqib</li>
+        <li>Hamza</li>
+        <li>Uzair</li>
+        <li>Shayan</li>
+    </ul>
+</section>
+
+<!-- JAVASCRIPT -->
+<script>
+let cart = [];
+let total = 0;
+
+function addToCart(book, price) {
+    cart.push({ book, price });
+    total += price;
+    renderCart();
+}
+
+function renderCart() {
+    const cartItems = document.getElementById("cartItems");
+    cartItems.innerHTML = "";
+    cart.forEach((item, index) => {
+        const li = document.createElement("li");
+        li.innerHTML = `${item.book} - PKR ${item.price} <button onclick="removeItem(${index})">❌</button>`;
+        cartItems.appendChild(li);
+    });
+    document.getElementById("total").innerText = total;
+}
+
+function removeItem(index) {
+    total -= cart[index].price;
+    cart.splice(index, 1);
+    renderCart();
+}
+
+function checkout() {
+    if(cart.length === 0){
+        alert("Your cart is empty!");
+        return;
+    }
+    document.getElementById("successMsg").innerText = "Order placed successfully! Thank you for shopping.";
+    cart = [];
+    total = 0;
+    renderCart();
+}
+</script>
+
 </body>
 </html>
